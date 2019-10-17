@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CounterApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digest Cycle</title>
+    <script src="../test/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>The Digest Cycle</h1>
+    <div ng-controller="CounterController">
+        Manual Way For watchers. Use console for outputs <br>
+        <button ng-click="showNumberOfWatchers();">Log # of Watchers</button>
+        <input type="text" ng-model='name'>
+        <div>
+            <button ng-click='onceCount()'>Up Once Counter (once)</button>
+            <button ng-click='upCounter()'>Up  Counter </button>
+        </div>
+
+        Automated AngularJs way for watchers <br>
+        Once Counter: {{onceCounter}} <br>
+        Once Counter: {{counter}} <br>
+
+    </div>
+</body>
+
+</html>

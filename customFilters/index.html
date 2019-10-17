@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expressions & Interpolation</title>
+    <script src="../test/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="MsgApp">
+    <h1>Expressions & Interpolation</h1>
+    <div ng-controller="MsgController">
+        {{name}} has a message for you: <br>
+        original: {{sayMessage()}} <br>
+        Loves: {{sayLovesMessage()}} <br>
+        Truth: {{sayLovesMessage() | truth:"coffee":"Black Coffe"}} <br>
+        Big Truth: {{sayLovesMessage() | truth:"coffee":"Black Coffe" | uppercase}} <br>
+        {{helloworld}}
+        <!-- will not through any error helloworld angular simply skip it -->
+
+        <div>
+            <button ng-click="feedMukun();">Feed Mukun</button>
+            Cost: {{coffeeCost|currency: "₹":2}}
+            <br>
+            <!-- will through 404 but will work fine -->
+            <img src="images/{{stateOfBeing}}.jpg" alt="" srcset="">
+
+            <!-- will not through 404 but will work fine -->
+            <img ng-src="images/{{stateOfBeing}}.jpg" alt="" srcset="">
+        </div>
+    </div>
+
+</body>
+
+</html>
