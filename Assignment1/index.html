@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lunch Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <style>
+    .message {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  </style>
+  <script src="../test/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="CheckFood">
+  <div class="container" ng-controller="CheckFoodCotroller">
+    <h1>Lunch Checker</h1>
+
+    <div class="form-group">
+      <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"
+        class="form-control" ng-model="foodItems">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" ng-click="mainFunction();">Check If Too Much</button>
+    </div>
+    <div class="form-group message">
+      {{message}}
+    </div>
+  </div>
+
+  <div>
+    App Purpose: <br>
+    <ol>
+      <li>Input the food items seperatred by comma.</li>
+      <li>If the food items less than or equal to 3. You will get message <b>Enjoy!</b></li>
+      <li>Or the food items greater than 3. You will get message <b>Too much!</b></li>
+    </ol>
+  </div>
+
+</body>
+
+</html>
