@@ -13,18 +13,10 @@
 <body>
     <h1>The Digest Cycle</h1>
     <div ng-controller="CounterController">
-        Manual Way For watchers. Use console for outputs <br>
-        <button ng-click="showNumberOfWatchers();">Log # of Watchers</button>
-        <input type="text" ng-model='name'>
         <div>
-            <button ng-click='onceCount()'>Up Once Counter (once)</button>
-            <button ng-click='upCounter()'>Up  Counter </button>
+            <button ng-click='upCounter()'>Up Once Counter (once)</button>
         </div>
-
-        Automated AngularJs way for watchers <br>
-        Once Counter: {{onceCounter}} <br>
         Regular Counter: {{counter}} <br>
-
     </div>
 </body>
 
